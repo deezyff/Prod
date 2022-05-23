@@ -18,7 +18,8 @@ Function Install-updates{
         $Subject = "Patching $(Get-Date -Format yyyy-MM-dd)"
         $SMTPServer = "smtp_internal.cmgmi.local"
         Send-MailMessage -From $From -to $To -Subject $Subject -SmtpServer $SMTPServer -BodyAsHtml $body
-    
+    }
+
     $computers = @("")
     Install-updates
     Validate-Updates
